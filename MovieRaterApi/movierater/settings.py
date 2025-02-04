@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-322^6@@9jjk+ks-6plq0)yd##j4-!x%5a_9#$3xj!xi1@r2p&$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -58,7 +59,12 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "https://movie-rating-frontend.vercel.app",
+    "https://movie-rating-frontend-chi.vercel.app",
 
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://movie-rating-frontend-chi.vercel.app",
 ]
 
 
